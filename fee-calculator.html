@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madrid China Fee Calculator — WIPO Total for Designation & Renewal (2026)</title>
+<meta name="description" content="Estimate the total WIPO cost to designate China under the Madrid Protocol: basic fee (CHF 653/903) plus China individual fees (CHF 220/110 first/additional class; renewal CHF 441/220), per WIPO Notice 9/2026 effective 12 April 2026.">
+<link rel="canonical" href="https://huaqingip.com/madrid-china/fee-calculator.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Madrid China Fee Calculator",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://huaqingip.com/madrid-china/fee-calculator.html",
+  "description": "Client-side calculator for the total WIPO fees to designate China under the Madrid Protocol (application, subsequent designation and renewal), including the basic fee and China individual fees.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CHF" },
+  "provider": { "@type": "Organization", "name": "Huaqing Innovation (Huaqing IP)", "url": "https://huaqingip.com" },
+  "softwareVersion": "2026.10",
+  "featureList": [
+    "WIPO basic fee for a new international application (CHF 653 black-and-white / 903 colour)",
+    "China individual fee for application or subsequent designation (CHF 220 first class, CHF 110 each additional)",
+    "China individual renewal fee (CHF 441 first class, CHF 220 each additional) per WIPO Notice 9/2026",
+    "1 to 45 Nice classes, ordinary and collective marks",
+    "Runs entirely in the browser; no data is collected"
+  ]
+}
+</script>
+<style>
+:root{--bg:#0f1420;--card:#182031;--line:#27324a;--txt:#e8edf6;--mut:#9aa7bd;--acc:#d4a24e;--ok:#3fa66e;--warn:#e0a23c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;color:var(--acc);font-size:16px}
+.brand a{color:var(--mut);font-weight:400;font-size:13px;margin-left:8px;text-decoration:none}
+.hero{padding:36px 0 16px}
+.hero h1{font-size:25px;line-height:1.3;margin-bottom:10px}
+.hero p{color:var(--mut);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:14px 0}
+.field{margin-bottom:18px}
+.field:last-child{margin-bottom:0}
+.field label{display:block;font-weight:600;font-size:14px;margin-bottom:9px}
+.opts{display:flex;gap:10px;flex-wrap:wrap}
+.seg{flex:1;min-width:130px;text-align:center;background:var(--bg);border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:11px 12px;cursor:pointer;font-size:14px;font-family:inherit}
+.seg:hover{border-color:var(--acc)}
+.seg.sel{border-color:var(--acc);background:rgba(212,162,78,.12);font-weight:600}
+.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+input[type=range]{flex:1;min-width:180px;accent-color:var(--acc)}
+.big{font-size:22px;font-weight:700;color:var(--acc);min-width:64px;text-align:right}
+table{width:100%;border-collapse:collapse;margin:6px 0;font-size:14.5px}
+th,td{text-align:left;padding:10px 6px;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:14px;border-top:2px solid var(--acc)}
+.total .t{font-size:16px;font-weight:600}
+.total .v{font-size:26px;font-weight:800;color:var(--acc);font-variant-numeric:tabular-nums}
+.usd{color:var(--mut);font-size:13px;text-align:right;margin-top:4px}
+.note{background:rgba(224,162,60,.1);border:1px solid var(--warn);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--mut);margin:14px 0}
+.cta{margin-top:18px;font-size:14.5px;color:var(--mut)}
+.cta a{color:var(--acc)}
+.btn{display:inline-block;background:var(--acc);color:#1a1408;padding:12px 24px;border-radius:9px;text-decoration:none;font-weight:700;margin-top:10px}
+footer{border-top:1px solid var(--line);padding:22px 0;margin-top:26px;color:var(--mut);font-size:13px}
+footer a{color:var(--acc);text-decoration:none}
+h2{font-size:17px;margin:22px 0 4px}
+.src{font-size:12.5px;color:var(--mut)}
+.src a{color:var(--acc);word-break:break-all}
+@media(max-width:520px){.seg{min-width:100%}.hero h1{font-size:22px}.total .v{font-size:22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Huaqing IP · Madrid China Fee Calculator<a href="index.html">← Back to guide</a></div></div></header>
+
+<div class="hero wrap">
+  <h1>Total WIPO fee to designate China (2026)</h1>
+  <p>Adds the WIPO basic fee to China's individual fee for a new application, subsequent designation or renewal. Figures reflect WIPO Notice 9/2026 (effective 12 April 2026). Everything runs in your browser — no data is collected.</p>
+</div>
+
+<div class="wrap">
+  <div class="card">
+    <div class="field">
+      <label>1. Transaction</label>
+      <div class="opts">
+        <button type="button" class="seg sel" data-group="txn" data-v="apply">Application / subsequent designation</button>
+        <button type="button" class="seg" data-group="txn" data-v="renew">Renewal (10-year)</button>
+      </div>
+    </div>
+
+    <div class="field" id="repField">
+      <label>2. Mark representation (new application)</label>
+      <div class="opts">
+        <button type="button" class="seg sel" data-group="rep" data-v="bw">Black &amp; white — CHF 653</button>
+        <button type="button" class="seg" data-group="rep" data-v="color">In colour — CHF 903</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label id="typeLabel">3. Mark type</label>
+      <div class="opts">
+        <button type="button" class="seg sel" data-group="mtype" data-v="ordinary">Ordinary mark</button>
+        <button type="button" class="seg" data-group="mtype" data-v="collective">Collective / certification</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>4. Number of Nice classes</label>
+      <div class="row">
+        <input type="range" id="classes" min="1" max="45" value="3">
+        <span class="big" id="classesVal">3</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="result">
+    <h2 id="resTitle">Fee breakdown</h2>
+    <table>
+      <thead><tr><th>Component</th><th class="num">CHF</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="total"><span class="t" id="totalLabel">Estimated total (China only)</span><span class="v" id="total">—</span></div>
+    <div class="usd" id="usd"></div>
+    <div class="note" id="note"></div>
+  </div>
+
+  <p class="cta">Filing, responding to a CNIPA provisional refusal, or renewing in China? <a href="https://calendly.com/huaqingip/30min" target="_blank" rel="noopener">Book a free 30-minute consult</a> for a fixed quote, or <a href="route-chooser.html">compare Madrid vs direct national filing</a>.</p>
+
+  <h2>Source &amp; scope</h2>
+  <p class="src">
+    Basic fee: WIPO Schedule of Fees — CHF 653 (black-and-white) / CHF 903 (colour) for an application; CHF 653 for renewal.
+    China individual fees: WIPO Information Notice No. 9/2026 (effective 12 April 2026) — application/subsequent designation CHF 220 first class + CHF 110 each additional; renewal CHF 441 first class + CHF 220 each additional; collective/certification application CHF 661 / CHF 331.
+    See <a href="https://www.wipo.int/en/web/madrid-system/fees/sched" target="_blank" rel="noopener">wipo.int Schedule of Fees</a> and <a href="https://www.wipo.int/documents/d/madrid-system/information-notices-en-2026-madrid_2026_9_e.pdf" target="_blank" rel="noopener">Notice 9/2026 (PDF)</a>.
+    China declares an individual fee, so the CHF 100 complementary fee does <strong>not</strong> apply to China. This estimate covers a single designation of China; other designated members, your home-office fee, and any agent service fee are not included. CHF→USD shown for planning only at ≈1.15.
+  </p>
+</div>
+
+<footer><div class="wrap">
+  © 2026 Huaqing Innovation (Huaqing IP / 华青创新) · CNIPA-recorded trademark agency<br>
+  <a href="https://huaqingip.com">Main site</a> · <a href="mailto:ip@huaqingip.com">ip@huaqingip.com</a> · <a href="faq.html">FAQ</a> · <a href="https://github.com/fangwenhe/madrid-china" target="_blank" rel="noopener">GitHub</a>
+</div></footer>
+
+<script>
+var state={txn:'apply',rep:'bw',mtype:'ordinary',classes:3};
+var F={
+  apply:{basicBW:653,basicColor:903,ordinary:[220,110],collective:[661,331]},
+  renew:{basic:653,ordinary:[441,220],collective:null}
+};
+function sel(btn){
+  var g=btn.getAttribute('data-group');
+  document.querySelectorAll('.seg[data-group="'+g+'"]').forEach(function(x){x.classList.remove('sel');});
+  btn.classList.add('sel');
+  state[g]=btn.getAttribute('data-v');
+  render();
+}
+document.querySelectorAll('.seg').forEach(function(b){b.addEventListener('click',function(){sel(b);});});
+document.getElementById('classes').addEventListener('input',function(e){
+  state.classes=parseInt(e.target.value,10);
+  document.getElementById('classesVal').textContent=state.classes;
+  render();
+});
+function fmt(n){return n.toLocaleString('en-US');}
+function render(){
+  var n=state.classes;
+  var rows=[];var basic=0;
+  var renew=state.txn==='renew';
+  var repField=document.getElementById('repField');
+  var typeLabel=document.getElementById('typeLabel');
+  // Renewal: collective individual fee not confirmed in the 2026 notice; show ordinary and note it.
+  if(renew){
+    repField.style.display='none';
+    typeLabel.textContent='3. Mark type (renewal)';
+    if(state.mtype==='collective'){state.mtype='ordinary';
+      document.querySelectorAll('.seg[data-group="mtype"]').forEach(function(x){x.classList.toggle('sel',x.getAttribute('data-v')==='ordinary');});
+    }
+    basic=F.renew.basic;
+    rows.push(['WIPO basic fee (renewal, 10 years)',basic]);
+    var first=F.renew.ordinary[0],add=F.renew.ordinary[1];
+    var china=first+add*(n-1);
+    rows.push(['China individual renewal fee — first class',first]);
+    if(n>1)rows.push(['China individual renewal fee — '+(n-1)+' additional class'+(n-1>1?'es':''),add*(n-1)]);
+  }else{
+    repField.style.display='';
+    typeLabel.textContent='3. Mark type';
+    basic=state.rep==='color'?F.apply.basicColor:F.apply.basicBW;
+    rows.push(['WIPO basic fee ('+(state.rep==='color'?'colour':'black & white')+')',basic]);
+    var fee=state.mtype==='collective'?F.apply.collective:F.apply.ordinary;
+    var label=state.mtype==='collective'?'Collective/certification individual fee':'China individual fee';
+    rows.push([label+' — first class',fee[0]]);
+    if(n>1)rows.push([label+' — '+(n-1)+' additional class'+(n-1>1?'es':''),fee[1]*(n-1)]);
+  }
+  var total=rows.reduce(function(a,r){return a+r[1];},0);
+  var tb=document.getElementById('rows');tb.innerHTML='';
+  rows.forEach(function(r){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td>'+r[0]+'</td><td class="num">'+fmt(r[1])+'</td>';
+    tb.appendChild(tr);
+  });
+  document.getElementById('total').textContent='CHF '+fmt(total);
+  document.getElementById('usd').textContent='≈ USD '+fmt(Math.round(total*1.15))+' (planning rate, not a quote)';
+  document.getElementById('resTitle').textContent=renew?'Renewal fee breakdown':'Application / designation fee breakdown';
+  var note=document.getElementById('note');
+  if(renew){
+    note.textContent='Renewal covers the next 10 years. The basic renewal fee is CHF 653 regardless of colour. For the collective/certification renewal individual fee, check the live WIPO schedule before paying. Late renewal is possible within a 6-month grace period with a surcharge.';
+  }else{
+    note.textContent='For a new international application the WIPO basic fee is CHF 653 (black & white) or CHF 903 (colour). China declares an individual fee, so no CHF 100 complementary fee is charged for China. This is a single-designation (China) estimate; add other members and your home-office fee separately.';
+  }
+}
+render();
+</script>
+</body>
+</html>

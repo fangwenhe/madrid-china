@@ -7,12 +7,13 @@ A focused, free resource on protecting a mark in China through the **Madrid Prot
 | Page | What it does |
 |---|---|
 | [index.html](https://huaqingip.com/madrid-china/) | Full guide: China individual fees, process, Madrid vs national comparison |
+| [fee-calculator.html](https://huaqingip.com/madrid-china/fee-calculator.html) | Tool: total WIPO fee for a China designation and renewal (basic + China individual fee, WIPO Notice 9/2026) |
 | [route-chooser.html](https://huaqingip.com/madrid-china/route-chooser.html) | Tool: four questions that recommend Madrid vs a direct CNIPA filing |
 | [faq.html](https://huaqingip.com/madrid-china/faq.html) | 8-question FAQ with FAQPage structured data |
 
 ## Related tools
 
-- [Madrid China fee calculator](https://huaqingip.com/china-ip-tools/madrid-china-fee-calculator.html) — exact CHF/CNY/USD total
+- [Madrid China fee calculator (full toolbox)](https://huaqingip.com/china-ip-tools/madrid-china-fee-calculator.html) — the broader fee tool in the main China IP toolbox
 - [Full China IP toolbox](https://huaqingip.com/china-ip-tools/) — fee, risk, class, timeline and dispute tools
 
 ## Maintained by
