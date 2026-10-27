@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madrid China Provisional Refusal Deadline Tracker (15-Day Response)</title>
+<meta name="description" content="Free calculator: the 15-day deadline to respond to a CNIPA provisional refusal of a Madrid designation in China. Input the date you received the WIPO notification, see the response deadline, official review fee (CNY 675/750) and what happens if you miss it.">
+<link rel="canonical" href="https://huaqingip.com/madrid-china/refusal-deadline-tracker.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Madrid China Provisional Refusal Deadline Tracker","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://huaqingip.com/madrid-china/refusal-deadline-tracker.html","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate the 15-day CNIPA response deadline for a Madrid China provisional refusal, with the official review fee and escalation consequences."}
+</script>
+<style>
+:root{--bg:#0f1420;--card:#182031;--line:#27324a;--txt:#e8edf6;--mut:#9aa7bd;--acc:#d4a24e;--ok:#3fa66e;--warn:#e0a23c;--bad:#d9534f}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;color:var(--acc);font-size:16px}
+.brand a{color:var(--mut);font-weight:400;font-size:13px;margin-left:8px;text-decoration:none}
+.hero{padding:38px 0 18px}
+.hero h1{font-size:25px;line-height:1.3;margin-bottom:10px}
+.hero p{color:var(--mut);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:14px 0}
+.card label{display:block;font-size:13px;color:var(--mut);margin-bottom:6px;font-weight:600;letter-spacing:.02em}
+.card input[type=date]{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--txt);font-size:16px;font-family:inherit}
+.card input[type=date]:focus{outline:none;border-color:var(--acc)}
+.btn{display:block;width:100%;background:var(--acc);color:#1a1408;border:0;padding:14px;border-radius:10px;font-size:16px;font-weight:700;margin-top:16px;cursor:pointer;font-family:inherit}
+.result{display:none;border-radius:12px;padding:22px;margin-top:18px;border:1px solid var(--line);background:var(--card)}
+.result.show{display:block}
+.bigdate{font-size:30px;font-weight:800;color:var(--acc);margin:6px 0 2px;letter-spacing:-.01em}
+.status{display:inline-block;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.status.ok{background:rgba(63,166,110,.15);color:var(--ok)}
+.status.warn{background:rgba(224,162,60,.15);color:var(--warn)}
+.status.bad{background:rgba(217,83,79,.15);color:var(--bad)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.cell{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:12px}
+.cell .k{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.cell .v{font-size:15px;font-weight:600;margin-top:2px}
+.note{margin-top:16px;padding:12px 14px;border-left:3px solid var(--acc);background:rgba(212,162,78,.08);border-radius:0 8px 8px 0;font-size:13.5px;color:var(--mut)}
+.note b{color:var(--txt)}
+ul.tight{margin:8px 0 0 18px;font-size:14px;color:var(--mut)}
+ul.tight li{margin:4px 0}
+.cta{margin-top:18px;font-size:14px;color:var(--mut)}.cta a{color:var(--acc)}
+footer{border-top:1px solid var(--line);padding:22px 0;margin-top:26px;color:var(--mut);font-size:13px}
+footer a{color:var(--acc);text-decoration:none}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.bigdate{font-size:24px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand">Huaqing IP · Madrid China Refusal Deadline<a href="index.html">← Back to guide</a></div></div></header>
+
+<div class="hero wrap">
+  <h1>Madrid China provisional refusal — 15-day response tracker</h1>
+  <p>When CNIPA rejects part (or all) of your Madrid designation in China, you have only <b>15 days</b> from the date you actually received the WIPO notification to file a review. Miss it and the China designation is gone for good. Nothing leaves your browser.</p>
+</div>
+
+<div class="wrap">
+  <div class="card">
+    <label for="recv">Date you / your agent actually received the WIPO provisional refusal notification</label>
+    <input type="date" id="recv">
+    <p style="font-size:12.5px;color:var(--mut);margin-top:8px">Do <b>not</b> use the WIPO Geneva mailing date — Chinese law counts from <b>receipt</b> by the applicant or its Chinese agent. Use the date stamped on the forwarded envelope / email from your Chinese associate.</p>
+  </div>
+
+  <button class="btn" onclick="calc()">Calculate my deadline</button>
+
+  <div id="res" class="result">
+    <span id="badge" class="status ok"></span>
+    <div style="font-size:13px;color:var(--mut);margin-top:8px">Last day to file the review (驳回复审)</div>
+    <div class="bigdate" id="deadline">—</div>
+    <div style="font-size:14px;color:var(--mut)" id="remaining"></div>
+
+    <div class="grid">
+      <div class="cell"><div class="k">Official review fee</div><div class="v">CNY 675 online<br><span style="font-size:12px;color:var(--mut)">CNY 750 paper filing</span></div></div>
+      <div class="cell"><div class="k">Review decision period</div><div class="v">≈ 9 months<br><span style="font-size:12px;color:var(--mut">+ up to 3 months extension</span></div></div>
+    </div>
+
+    <div class="note">
+      <b>Critical rules for a Madrid China-phase refusal:</b>
+      <ul class="tight">
+        <li>The review <b>must be filed by a CNIPA-recorded Chinese agent, in Chinese</b> — your home-country attorney cannot file it directly.</li>
+        <li>The 15 days are <b>calendar days</b>; if the last day falls on a Chinese public holiday, it rolls to the next working day (confirm the holiday calendar with your agent).</li>
+        <li>If you miss the deadline, the CNIPA decision becomes final and <b>your entire China designation under this international registration is cancelled — there is no reinstatement</b> (unlike a domestic national filing, where a late grace exists for renewals but not for refusal review).</li>
+        <li>The review may be filed against the refusal only; you cannot add new goods/services at this stage.</li>
+      </ul>
+    </div>
+
+    <p class="cta">Need a Chinese agent to file the review within the window? <a href="https://calendly.com/huaqingip/30min" target="_blank" rel="noopener">Book a free 30-min call</a> · <a href="faq.html">Read the FAQ</a> · <a href="fee-calculator.html">Fee calculator</a></p>
+  </div>
+</div>
+
+<footer><div class="wrap">
+  © 2026 Huaqing Innovation (Huaqing IP / 华青创新) · <a href="https://huaqingip.com">Main site</a> · <a href="mailto:ip@huaqingip.com">ip@huaqingip.com</a><br>
+  Planning aid only — not legal advice. Deadline rules follow the PRC Trademark Law and its implementing regulations as at 2026; confirm with a CNIPA-recorded agent.
+</div></footer>
+
+<script>
+function todayIso(){var d=new Date();return d.toISOString().slice(0,10)}
+document.getElementById('recv').value = todayIso();
+
+function calc(){
+  var v = document.getElementById('recv').value;
+  if(!v){alert('Please pick the date you received the notification.');return}
+  var recv = new Date(v+'T00:00:00');
+  var ddl = new Date(recv); ddl.setDate(ddl.getDate()+15);
+  var now = new Date(); now.setHours(0,0,0,0);
+  var days = Math.round((ddl - now)/86400000);
+  var ddlIso = ddl.toLocaleDateString('en-GB',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  document.getElementById('deadline').textContent = ddlIso;
+  var badge = document.getElementById('badge');
+  var rem;
+  if(days<0){badge.className='status bad';badge.textContent='Deadline missed';rem='This window has already closed.'}
+  else if(days===0){badge.className='status bad';badge.textContent='Last day today';rem='You must file today — do not wait.'}
+  else if(days<=3){badge.className='status bad';badge.textContent=days+' days left — urgent';rem='Contact a Chinese agent immediately. The review must be drafted in Chinese.'}
+  else if(days<=7){badge.className='status warn';badge.textContent=days+' days left';rem='Tight but workable. Brief your Chinese agent now with evidence of use and distinctiveness.'}
+  else{badge.className='status ok';badge.textContent=days+' days left';rem='There is still time, but the Chinese review takes weeks to draft — start the agent briefing now.'}
+  document.getElementById('remaining').textContent = rem;
+  document.getElementById('res').classList.add('show');
+  document.getElementById('res').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
+</html>
