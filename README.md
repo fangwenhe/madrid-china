@@ -10,6 +10,7 @@ A focused, free resource on protecting a mark in China through the **Madrid Prot
 | [fee-calculator.html](https://huaqingip.com/madrid-china/fee-calculator.html) | Tool: total WIPO fee for a China designation and renewal (basic + China individual fee, WIPO Notice 9/2026) |
 | [route-chooser.html](https://huaqingip.com/madrid-china/route-chooser.html) | Tool: four questions that recommend Madrid vs a direct CNIPA filing |
 | [refusal-deadline-tracker.html](https://huaqingip.com/madrid-china/refusal-deadline-tracker.html) | Tool: 15-day CNIPA provisional-refusal response deadline, review fee (CNY 675/750), escalation consequences |
+| [transformation-checker.html](https://huaqingip.com/madrid-china/transformation-checker.html) | Tool: 3-month deadline to transform a cancelled international registration into a national application after a central attack, CNIPA fee at national rates, documents and the IR date preserved |
 | [faq.html](https://huaqingip.com/madrid-china/faq.html) | 8-question FAQ with FAQPage structured data |
 
 ## Related tools
